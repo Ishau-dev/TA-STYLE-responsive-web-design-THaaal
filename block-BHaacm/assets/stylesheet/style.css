@@ -63,6 +63,18 @@ table {
     .margin-bot .btn{
         margin-bottom: 2rem;
     }
+
+    .footer .small-screen{
+        text-align: center;
+        
+    }
+
+    .footer nav{
+        align-self: center;
+        margin-top: 1rem;
+    }
+    
+   
 }
 
 @media only screen and (min-width: 769px ){
