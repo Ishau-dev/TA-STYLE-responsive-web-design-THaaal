@@ -76,10 +76,6 @@ a{
     color: var(--first);
 }
 
-align-left{
-    align-items: flex-start;
-}
-
 .flex{
     display: flex;
 }
@@ -124,6 +120,7 @@ align-left{
     max-width: 1300px;
     margin: 0 auto;
     width: 100%;
+    padding: 0 2rem;
 }
 
 .padding{
@@ -136,6 +133,8 @@ align-left{
 .navbar{
     position: absolute;
     width: 100%;
+    top: 0;
+    left: 0;
 }    
 
 .brand{
@@ -143,9 +142,10 @@ align-left{
     font-weight: 700;
 }
 
-nav li{
+.nav-menu li{
     font-size: 0.9rem;
     margin-left: 2rem;
+    align-items: center;
 }
 
 .btn{
@@ -155,12 +155,17 @@ nav li{
     color: var(--first);
 }
 
+#toggle,.bars{
+    display: none;
+}
+
 /* Hero */
 
 .hero{
     background: linear-gradient(rgba(55,45,178, 0.7),rgba(55,45,178, 0.7)), url(../banner.png) no-repeat;
     padding: 3rem 0;
     color: var(--first);
+    background-size:cover;
 }
 
 .active{
@@ -181,6 +186,9 @@ nav li{
     margin-bottom: 2rem;
 }
 
+.hero img{
+    margin-top: 4rem;
+}
 /*why join*/
 
 .why-join{
@@ -353,4 +361,117 @@ i{
     text-align: center;
     color: grey;
 }
+
+
+
+@media screen and (max-width: 1200px){
+        .container{
+            max-width: 1140px;
+        }
+}
+
+@media screen and (max-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    html{
+        font-size: 16px;
+    }
+
+    .navbar{
+        position: fixed;
+        background-color: var(--sixth);  
+    }
+
+    .nav{
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(35,52,123, 0.9);
+        height: 100vh;
+        padding-top: 6rem;
+        z-index: 9;
+    }
+
+    #toggle:checked ~ .nav{
+        display: inline-block;
+    }
+
+
+    .bars{
+        display: inline-block;
+        color: white;   
+        z-index: 99;
+    }
+
+    .brand{
+        z-index: 99;
+    }
+
+    .sm-column{
+        flex-direction: column;
+    }
+
+    .sm-padding{
+        padding: 0 2rem;
+    }
+
+    .sy-margin{
+        margin: 2rem 0;
+    }
+
+    .nav-menu li{
+        margin: 1rem 0;
+    }
+
+    /*hero*/
+    .hero .hero-content1 h1{
+        margin-top: 4rem;
+    }
+
+    .sm-flex-100{
+        flex: 0 1 100%;
+    }
+
+    .sm-items-center{
+        align-items: center;
+    }
+    .sm-flex-33{
+        flex: 0 1 33%;
+    }
+
+    .sm-flex-40{
+        flex: 0 1 40%;
+    }
+
+    .sm-flex{
+        display: flex;
+    }
+
+    .sm-flex-wrap{
+        flex-wrap: wrap;
+    }
+
+    .sm-width-full{
+        width: 100%;
+    }
+
+    .sm-center h2,p,a{
+        justify-content: center;
+
+    }
+}
+
+@media screen and (max-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+}
+
 
